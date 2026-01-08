@@ -25,6 +25,16 @@ export function addEntry(entry) {
   );
 }
 
+/*
+ Delete entries by ID.
+
+ This is part of the app's sync algorithm (see README): after the client
+ successfully POSTs new rows to the Apps Script, the sync routine deletes the
+ synced records from IndexedDB to avoid re-uploading them and to free local
+ storage. `main.js` also records `lastSyncedId` in `localStorage` as an
+ additional guard, but removing the entries is the actual cleanup step that
+ enforces deduplication and keeps the database small.
+*/
 export function deleteEntries(ids) {
   return openDB().then((db) =>
     new Promise((resolve, reject) => {
