@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <style>
+    .bg { fill: #f7f7f7; }
+    .card { fill: #fff; stroke: #ccc; stroke-width: 1; }
+    .muted { fill: #666; font-size: 14px; }
+    .title { fill: #222; font-size: 20px; font-weight: 700; }
+    .label { fill: #333; font-size: 14px; }
+    .input { fill: #fff; stroke: #bbb; stroke-width: 1; }
+    .button { fill: #e0e0e0; stroke: #bdbdbd; stroke-width: 1; }
+    .buttonText { fill: #111; font-size: 14px; }
+    .listItem { fill: #333; font-size: 13px; }
+  </style>
+
+  <!-- background -->
+  <rect class="bg" x="0" y="0" width="900" height="700" rx="0"/>
+
+  <!-- main card -->
+  <rect class="card" x="40" y="30" width="820" height="620" rx="6"/>
+
+  <!-- header/title -->
+  <text class="title" x="70" y="70">Weight &amp; Waist Tracker</text>
+  <text class="muted" x="70" y="92">Simple tracker that saves to IndexedDB and can sync to Google Sheets</text>
+
+  <!-- input area -->
+  <rect x="70" y="110" width="760" height="130" rx="6" fill="#fafafa" stroke="#e6e6e6" />
+  <text class="label" x="90" y="140">Weight (kg)</text>
+  <rect class="input" x="90" y="150" width="220" height="30" rx="4"/>
+  <text class="label" x="340" y="140">Waist (cm)</text>
+  <rect class="input" x="340" y="150" width="220" height="30" rx="4"/>
+  <text class="label" x="620" y="140">Height (cm)</text>
+  <rect class="input" x="620" y="150" width="100" height="30" rx="4"/>
+  <text class="muted" x="628" y="172">(fixed)</text>
+
+  <!-- buttons -->
+  <rect class="button" x="90" y="200" width="140" height="36" rx="6"/>
+  <text class="buttonText" x="120" y="225">Save Now</text>
+  <rect class="button" x="250" y="200" width="140" height="36" rx="6"/>
+  <text class="buttonText" x="300" y="225">Sync Now</text>
+
+  <!-- status -->
+  <text class="label" x="420" y="225">Total saved: <tspan class="muted">12</tspan></text>
+
+  <!-- entries list -->
+  <rect x="70" y="260" width="760" height="340" rx="6" fill="#fff" stroke="#eee"/>
+  <text class="label" x="90" y="290">Entries (newest first)</text>
+
+  <!-- list items (examples) -->
+  <g transform="translate(90,310)">
+    <text class="listItem" x="0" y="0">#123 — 2026-01-08</text>
+    <text class="muted" x="0" y="18">Weight: 72 kg · Waist: 85 cm · Height: 170 cm · W/H: 0.50</text>
+
+    <text class="listItem" x="0" y="48">#122 — 2026-01-07</text>
+    <text class="muted" x="0" y="66">Weight: 70 kg · Waist: 86 cm · Height: 170 cm · W/H: 0.51</text>
+
+    <text class="listItem" x="0" y="96">#121 — 2026-01-06</text>
+    <text class="muted" x="0" y="114">Weight: 72.5 kg · Waist: 87 cm · Height: 170 cm · W/H: 0.51</text>
+  </g>
+
+  <!-- footer/help -->
+  <text class="muted" x="70" y="630">Tip: Open index.html in a browser. Inputs: weightInput, waistInput. Buttons: saveBtn, syncBtn.</text>
+
+</svg>
